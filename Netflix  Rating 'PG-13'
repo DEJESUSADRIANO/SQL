@@ -1,0 +1,10 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+# SELECIONE OS FILMES COM O title, rating e release_year de todos os filmes em que o rating seja PG-13
+
+SELECT title, rating, release_year
+FROM netflix A
+WHERE 0=0
+AND A.rating = "PG-13"
