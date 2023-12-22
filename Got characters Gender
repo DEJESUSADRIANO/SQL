@@ -1,0 +1,10 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+#Selecione o nome e genero de 10 personagens da tabela got_characters
+
+SELECT character_name, gender
+FROM got_characters
+WHERE 0=0
+LIMIT 10;
