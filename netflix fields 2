@@ -1,0 +1,14 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+# Select os campos (title, rating, ratingdescription, release_year) da table netflix  limitados a 1000 linhas
+
+SELECT
+title,
+rating,
+ratingdescription,
+release_year
+FROM netflix
+WHERE 0=0
+LIMIT 1000
