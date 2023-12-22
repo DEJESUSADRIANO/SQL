@@ -1,0 +1,10 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+# Quantas especies distintas existem no mundo de Game of thrones (GOT).
+
+SELECT 
+DISTINCT species
+FROM gotcreatures
+WHERE 0=0
