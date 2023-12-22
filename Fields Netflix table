@@ -1,0 +1,13 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+
+# Selecione os campos (tiele, rating, release_year) da tabela Netflix
+
+SELECT
+title,
+rating,
+release_year
+FROM netflix
+WHERE 0=0;
