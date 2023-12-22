@@ -1,0 +1,11 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+#SELECIONE OS FILMES COM O title. rating, release_year de todos os filmes em que
+# o ratingdescription seja maior ou igual a 100
+
+SELECT title, rating, release_year, ratingdescription
+FROM netflix A
+WHERE 0=0
+AND A.ratingdescription >= '100'
