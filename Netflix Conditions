@@ -1,0 +1,14 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+#Selecione todos os campos da tabela netflix e ordene por titulo com a condição que esteja entre "13 Reasons Why" AND "Baby Daddy"
+
+SELECT *
+FROM netflix A
+WHERE 0=0
+AND A.title BETWEEN "13 Reasons Why" AND "Baby Daddy"
+ORDER BY A.title
+
+
+
