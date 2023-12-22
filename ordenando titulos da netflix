@@ -1,0 +1,11 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+#Selecione titulos unicos da tabela netflix e ordene por ordem alfabetica 
+
+SELECT
+DISTINCT title
+FROM netflix
+WHERE 0=0
+ORDER BY netflix.title
