@@ -1,0 +1,11 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+#SELECIONE OS FILMES COM O title. rating, release_year de todos os filmes em que
+# o release_year SEJA ANTERIOR A 2012
+
+SELECT title, rating, release_year
+FROM netflix A
+WHERE 0=0
+AND A.release_year < 2012
