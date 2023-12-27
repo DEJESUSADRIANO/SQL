@@ -1,3 +1,12 @@
 --Dataset: introduction-to-data-analytics From Data.World
 --Source: https://data.world/jerrys/introduction-to-data-analytics
 --Queried using: Data world notebook
+
+--Dê-me tudo de todas as batalhas de verão (summer) 
+--em que o atacante (attracker_king1) foi Joffrey
+
+SELECT *
+FROM got_battles A 
+WHERE 0=0
+AND A.summer = 'true'
+AND A.attacker_king LIKE "%Joffrey%"
