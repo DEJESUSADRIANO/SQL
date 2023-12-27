@@ -1,0 +1,43 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--MERGE DATA FROM THESE 2 TAVLES (BRING EVERTTHING - ALL COLUMNS)
+--ADS_DATA_REVENUE_1 & ADS_DATA_REVENUE_2
+-- ORDER BY CAMPAIGN ID
+SELECT 
+campaign_id,
+timestamp,
+date,
+inventorytype,
+ad_type,
+available_impressions,
+matched_queries,
+impressions,
+clicks,
+spend,
+fee,
+revenue,
+ctr,
+cpm,
+cpc
+FROM ads_data_revenue_1
+UNION
+SELECT 
+campaign_id,
+timestamp,
+date,
+inventorytype,
+ad_type,
+available_impressions,
+matched_queries,
+impressions,
+clicks,
+spend,
+fee,
+revenue,
+ctr,
+cpm,
+cpc
+FROM ads_data_revenue_2
+ORDER BY campaign_id
