@@ -1,0 +1,20 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--CRIE UMA UNIÃO DE AMBAS AS TABELAS (ADS-DATA_REVENUE_1 & ADS-DATA_REVENUE_1)
+--USANDO A date, ad_type E Revenue
+
+SELECT
+A.`date`,
+A.ad_type,
+A.revenue
+FROM ads_data_revenue_1 A
+WHERE 0=0
+UNION
+SELECT
+B.`date`,
+B.ad_type,
+B.revenue
+FROM ads_data_revenue_2 B
+WHERE 0=0
