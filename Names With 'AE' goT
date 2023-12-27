@@ -1,0 +1,11 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--Mostre-me todos os personagens (characters) cujo nome contenha 'ae' - got_characters
+
+SELECT 
+A.character_name
+FROM got_characters A
+WHERE 0=0
+AND A.character_name LIKE '%AE%'
