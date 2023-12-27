@@ -1,0 +1,24 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--REFAÇA O MESMO EXERCICIO ANTERIOR MAS AGORA USANDO A SOMA DO REVENUE 
+--AO INVÉS DE VALORES UNICOS
+--CRIE UMA UNIÃO DE AMBAS AS TABELAS (ADS-DATA_REVENUE_1 & ADS-DATA_REVENUE_1)
+--USANDO A date, ad_type E Revenue
+
+SELECT
+A.`date`,
+A.ad_type,
+SUM (A.revenue)
+FROM ads_data_revenue_1 A
+WHERE 0=0
+GROUP BY A.date, A.ad_type
+UNION
+SELECT
+B.`date`,
+B.ad_type,
+SUM (B.revenue)
+FROM ads_data_revenue_2 B
+WHERE 0=0
+GROUP BY B.date, B.ad_type
