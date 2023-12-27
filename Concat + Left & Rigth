@@ -1,0 +1,14 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--USANDO A QUERY ABAIXO, ADAPTE ESTA QUERY PARA MOSTRAR EM COLUNAS AO LADO,
+--OS 5 PRIMEIROS CARACTERES DA ESQUERDA E 5 DA DIREITA
+
+SELECT
+CONCAT(A.host_name, ' ', A.host_neighbourhood),
+LEFT (CONCAT(A.host_name, ' ', A.host_neighbourhood),5),
+RIGHT (CONCAT(A.host_name, ' ', A.host_neighbourhood),5)
+FROM boston_airbnb_listings A 
+WHERE 0=0
+LIMIT 1000
