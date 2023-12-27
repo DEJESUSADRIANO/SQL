@@ -1,0 +1,14 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+SELECT 
+name,
+message
+FROM cbs_news_131459315949_2 
+UNION
+SELECT 
+name,
+message
+FROM bbc_228735667216_2 
+ORDER BY name
