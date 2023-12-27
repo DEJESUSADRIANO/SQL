@@ -1,0 +1,17 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+SELECT
+A.partner,
+A.advertiser,
+ROUND(SUM(A.cost))
+FROM auto_data A
+GROUP BY A.partner, A.advertiser
+UNION
+SELECT
+B.partner,
+B.advertiser,
+ROUND(SUM(B.cost))
+FROM auto_data_november B
+GROUP BY B.partner, B.advertiser
