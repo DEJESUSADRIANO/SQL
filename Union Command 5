@@ -1,0 +1,22 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+SELECT
+A.name,
+A.message,
+A.likes_count,
+A.angry_count
+FROM cbs_news_131459315949_2 A
+WHERE 0=0
+AND A.likes_count > 1000
+UNION
+SELECT
+B.name,
+B.message,
+B.likes_count,
+B.angry_count
+FROM bbc_228735667216_2 B 
+WHERE 0=0
+AND B.likes_count > 1000
+ORDER BY angry_count DESC
