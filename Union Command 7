@@ -1,0 +1,26 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--COMBINE OS  DADOS DA TABELA (BBC) COM OS DADOS DA TABELA (CBS)
+--SELECIONE OS CAMPOS ID, NAME, POST_TYPE
+-- FEILTRE POR NAME COM AS SEGUINTES CONDIÇÕES (TABLE BBC) ONDE O NOME É BBC NEW PHOTOS
+--(TABLE CBS) ONDE O NOME CONTÉM AUSTRALIA
+--LIMIT OS RESULTADOS BY 1000
+
+SELECT
+A.id,
+A.name,
+A.post_type
+FROM bbc_228735667216_2 A
+WHERE 0=0
+AND A.name = 'BBC News Photos'
+UNION
+SELECT
+B.id,
+B.name,
+B.post_type
+FROM cbs_news_131459315949_2 B
+WHERE 0=0
+AND B.name LIKE "%AUSTRALIA%"
+LIMIT 1000
