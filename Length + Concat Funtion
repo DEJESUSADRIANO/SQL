@@ -1,0 +1,11 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--JUNTE NAME E HOST_HOSTNAME E EM UMA OUTRA COLUNA MOSTRE O NUMERO DE CARACTERES DESTA JUNÇÃO
+
+SELECT 
+CONCAT (A.name, ' ', A.host_name),
+LENGTH (CONCAT (A.name, ' ', A.host_name))
+FROM boston_airbnb_listings A 
+WHERE 0=0
