@@ -1,0 +1,14 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--QUAL A MÉDIA SALARIAL PARA AS PROFISSÕES QUE CONTËM A PALAVRA Police no 
+--JOB TITLE (jobtitle)
+
+SELECT 
+A.jobtitle,
+AVG(A.totalpaybenefits)
+FROM san_francisco_salaries A
+WHERE 0=0
+AND A.jobtitle LIKE "%POLICE%"
+GROUP BY A.jobtitle
