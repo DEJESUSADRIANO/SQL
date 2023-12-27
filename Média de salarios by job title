@@ -1,0 +1,13 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--QUAL A MËDIA DE SALARIOS POR JOB TITLE (jobtitle)?
+
+SELECT 
+A.jobtitle,
+AVG (A.totalpay)
+FROM san_francisco_salaries A
+GROUP BY A.jobtitle
+
+
