@@ -1,0 +1,11 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--QUAL O MAIOR E MENOR SALÁRIO POR JOB TITLE (jobtitle)?
+
+SELECT
+MAX(A.totalpaybenefits),
+MIN(A.totalpaybenefits)
+FROM san_francisco_salaries A
+WHERE 0=0;  
