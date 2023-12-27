@@ -1,0 +1,13 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--USANDO A TABELA NETFLIX, FAÇA O TRIM DOS NOMES DOS FILMES
+
+SELECT 
+A.title,
+LTRIM (A.title),
+RTRIM (A.title)
+FROM netflix A
+WHERE 0=0
+LIMIT 100
