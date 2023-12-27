@@ -1,0 +1,14 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--Mostre-me o número de batalhas em que o rei atacante (attracker_king1) era um Baratheon e
+--o rei defensor (defender_king1) era um Stark - battles (got_battles)
+
+SELECT 
+A.attacker_king,
+A.defender_king
+FROM got_battles A
+WHERE 0=0
+AND A.attacker_king LIKE "%BARATHEON%"
+AND A.defender_king LIKE "%STARK%"
