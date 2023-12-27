@@ -1,0 +1,9 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--SELECIONE BATALHAS DE NUMEROS 10 A 20 NA TABELA (GOT_BATTLES)
+SELECT *
+FROM got_battles A
+WHERE 0=0
+AND A.battle_number BETWEEN 10 AND 20
