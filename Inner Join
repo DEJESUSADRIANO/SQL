@@ -1,0 +1,14 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--ESCREVA UMA CONSULTA SQL PARA JOIN NAS TABELAS ADS_DATA_REFERENCE E ADS_DATA_REVENUE_1
+--ONDE VOCÊ OBTÉM A HORA DO DIA EM UMA TABELA E A TAXA (FEE) NA OUTRA.
+
+SELECT 
+A.hour_of_day,
+B.fee
+FROM ads_data_reference A
+INNER JOIN ads_data_revenue_1 B
+ON A.campaign_id = B.campaign_id
+WHERE 0=0
