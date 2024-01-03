@@ -1,0 +1,11 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--AGORA USANDO A MESMA QUERY DO EXER57, GERE UMA TABELA COM A MÉDIA DE SALARIO TOTAL + BONUS PO STATUS
+
+SELECT
+A.status,
+AVG (A.salary+A.salary*A.bonus)
+FROM employee_status A
+GROUP BY A.status
