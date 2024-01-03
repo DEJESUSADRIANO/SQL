@@ -1,0 +1,18 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--6.emos duas tabelas, user_info (usuários) e platform_usage (uso da plataforma). A tabela de usuários (user_info) contém informações que temos sobre os usuários 
+--da nossa plataforma. A tabela de uso (platform_usage) rastreia o uso da plataforma que registra o browser (navegador) e o device_type (tipo_de_dispositivo) 
+--sempre que um usuário faz login na Plataforma.
+--Entre os navegadores (browser). Qual o navegador mais usado pelo total de visitas e quantas vezes ele foi usado?
+
+SELECT 
+COUNT (A.browser) AS CONTAGEM,
+A.browser,
+A.device_type
+FROM platform_usage A 
+WHERE 0=0
+GROUP BY A.browser
+ORDER BY CONTAGEM DESC
+
