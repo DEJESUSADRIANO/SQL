@@ -1,0 +1,11 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--UMA TABELA COM A SOMA DE TOATALPAY POR JOBTITLE
+
+SELECT 
+A.jobtitle,
+SUM(A.totalpay)
+FROM san_francisco_salaries A
+GROUP BY A.jobtitle
