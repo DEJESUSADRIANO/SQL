@@ -2,10 +2,16 @@
 --Source: https://data.world/jerrys/introduction-to-data-analytics
 --Queried using: Data world notebook
 
+
+--2.Utilizando a tabela san_francisco_salaries:
+--Para ver um snapshot da tabela, use a query abaixo
+
+SELECT *
+FROM san_francisco_salaries
+LIMIT 10
+
+--Responda.
 --Quais são os 3 job titles com os mais altos salários médios (average salary)
---DICA: Mais uma vez precisamos utilizar uma função de agregação para calcular o salário médio por jobtitle
-
-
 
 SELECT 
 A.jobtitle,
