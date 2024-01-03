@@ -1,0 +1,10 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+SELECT
+A.employeename,
+A.jobtitle,
+(CAST(A.basepay AS DECIMAL) + CAST(A.overtimepay AS DECIMAL)) AS TOTAL_SALARY
+FROM san_francisco_salaries A
+LIMIT 1000
