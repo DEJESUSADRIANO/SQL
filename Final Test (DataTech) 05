@@ -1,0 +1,16 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--5.Usando a mesma tabela netflix liste o título (title) de todas as séries ou filmes que possuem a o termo "scary images" no campo ratinglevel e que tenham sido lançadas
+--de 2013 em diante (incluindo 2013)
+
+SELECT 
+DISTINCT A.title,
+A.ratinglevel,
+A.release_year
+FROM netflix A
+WHERE 0=0
+AND A.ratinglevel LIKE ('%scary images%')
+AND A.release_year >= '2013'
+
