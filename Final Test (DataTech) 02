@@ -1,0 +1,16 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--Quais são os 3 job titles com os mais altos salários médios (average salary)
+--DICA: Mais uma vez precisamos utilizar uma função de agregação para calcular o salário médio por jobtitle
+
+
+
+SELECT 
+A.jobtitle,
+AVG(A.totalpay)
+FROM san_francisco_salaries A
+GROUP BY A.jobtitle
+ORDER BY AVG(A.totalpay) DESC
+LIMIT 3
