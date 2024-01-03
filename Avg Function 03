@@ -1,0 +1,12 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--UMA TABELA COM A MÉDIA DOM(TOTALPAYBENEFITS) POR ANO (YEAR)
+
+SELECT
+A.year,
+AVG(A.totalpaybenefits)
+FROM san_francisco_salaries A
+WHERE 0=0
+GROUP BY A.year
