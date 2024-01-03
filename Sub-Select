@@ -1,0 +1,20 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+SELECT name, (salary*bonus_pay) AS bonus_total FROM
+(SELECT name, surname, salary, bonus_pay
+FROM
+(SELECT ec.employee_id, ec.client, ec.revenue, ec.sales,
+en.first_name AS name, en.last_name AS surname,
+es.salary AS salary, es.status, es.bonus AS bonus_pay,
+em.state
+FROM employee_clients ec
+JOIN employee_names en
+ON ec.employee_id=en.employee_id
+JOIN employee_status es
+ON es.employee_id=en.employee_id
+JOIN employee_state_manager em
+ON em.employee_id=en.employee_id) t1
+WHERE state IN ('California', 'Texas', 'Florida'))AS temp1
+WHERE salary*bonus_pay > 4000
