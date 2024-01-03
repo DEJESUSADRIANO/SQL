@@ -1,0 +1,18 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--USANDO VÁRIOS JOIN OBTENHA O CLIENT NAME(CLIENT), EMAIL & PRODUCTS
+--TABELAS STORE_COTUMER_IDS, STORE_COSTUMER_CONTACTS
+
+SELECT 
+B.client,
+A.email,
+SUM(C.price)
+FROM store_costumer_contact A
+INNER JOIN store_costumer_ids B
+ON A.client_id = B.client_id
+INNER JOIN store_costumer_sales C
+ON A.client_id = C.client_id
+WHERE 0=0 
+GROUP BY B.client, A.email
