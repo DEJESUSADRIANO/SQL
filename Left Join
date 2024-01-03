@@ -1,0 +1,11 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--Retornar os mesmos valores do exercício 1, mas apenas para funcionários de TX,FL e C
+
+SELECT ep.employee_name, ep.state, es.salary, es.bonus
+FROM employees ep
+LEFT JOIN employees_salary es
+ON ep.employee_id=es.employee_id
+WHERE state IN ('CA', 'TX', 'FL')
