@@ -1,0 +1,18 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--1. Quantas pessoas submeteram uma aplicação e quantas pessoas não submeteram uma aplicação? 
+--Dica: O campo submitted_at conta toda vez que uma aplicação é submetida. Quando o campo não está vazio (IS NOT NULL) 
+--quer dizer que um registro foi feito, quando ele não contain data (IS NULL) significa que a aplicação não foi submetida.
+
+
+
+SELECT 
+A.applicant_id,
+A.application_created_at,
+COUNT (A.submitted_at)
+FROM applications_csv A
+WHERE 0=0
+AND A.submitted_at IS NOT  NULL
+GROUP BY A.applicant_id, A.application_created_at
