@@ -1,0 +1,18 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--DIGAMOS QUE VOCÊ DESEJA INVESTIR EM PROPRIEDADES E DESEJE ENCONTRAR A DIARIA MÉDIA
+--PARA PROPRIEDADES QUE TEM UMA DIÁRIA MÉDIA DE 150 DÓLARES OU MAIS E O NUMERO
+--DE PRORIEDADES POR BAIRRO (NEIGHBOURHOOD).
+
+SELECT
+A.neighbourhood,
+COUNT(A.id) AS NUMBER_OF_PROPERTIES,
+AVG(A.price)
+FROM boston_airbnb_listings A
+WHERE 0=0
+AND A.neighbourhood IS NOT NULL
+AND A.price >= 150
+AND A.room_type = 'Entire home/apt'
+GROUP BY A.neighbourhood
