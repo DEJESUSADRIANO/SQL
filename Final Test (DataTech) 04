@@ -1,0 +1,17 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--4.Usando a tabela netflix, responda
+--Quantos shows tiveram o user_rating_score igual ou acima de 90 entre os anos de 2010 à 2017 de acordo com o rating?
+
+SELECT
+A.title,
+A.rating,
+COUNT(A.user_rating_score),
+A.release_year
+FROM netflix A
+WHERE 0=0
+AND A.user_rating_score > 90
+AND A.release_year BETWEEN 2010 AND 2017
+GROUP BY A.rating
