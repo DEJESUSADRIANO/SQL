@@ -1,0 +1,16 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+SELECT
+A.employee_id, A.client, A.revenue, A.sales, 
+B.first_name, B.last_name,
+C.salary, C.status,
+D.state 
+FROM employee_clients A
+INNER JOIN employee_names B
+ON A.employee_id = B.employee_id
+INNER JOIN employee_status C
+ON C.employee_id = B.employee_id
+INNER JOIN employee_state_manager D
+ON D.employee_id = B.employee_id
