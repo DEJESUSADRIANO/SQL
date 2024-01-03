@@ -1,0 +1,15 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--USANDO AS TABELAS EMPLOYEES (4 TABELAS) OBSERVE O ESUQEMAS DAS TABELAS E DESCUBRA 
+--QUE TIPO DE DADOS ESTA EM CADA TABELA E RESPONDA AS SEGUINTES PERGUNTAS
+--01 CRIE UMA TABELA (VIEW) COM O NAME, STATE, SALARY, AND BONUS DE CADA FUNCIONARIO.
+--RETORNE TODOS OS FUNCIONARIOS (MESMO EM BRANCO) DA TABELA QUE CONTÉM NAME STATE, 
+--MAS APENAS OS REGISTRO CORRSTPONDENTES DA TABELA À DIREITA (TABELA2) CONTENDO BONUS E SALARIO
+
+
+SELECT ep.employee_name, ep.state, es.salary, es.bonus
+FROM employees ep
+LEFT JOIN employees_salary es
+ON ep.employee_id=es.employee_id
