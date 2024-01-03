@@ -1,0 +1,23 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--Seu gerente deseja enviar um gift card de R$30 a todos os clientes que gastaram
+--mais de 300 em nossas lojas, precisamos da lista de clientes que no total 
+--gastaram masi de 300 dolares, precisamos contacta-los por telefone e precisamos
+--do email deles para enviar o cartão presente. tmabém precisamos saber quanto eles gastaram
+--em nossa loja. você pode me fornecer essa lista usando as tabelas Stores
+
+SELECT 
+B.client,
+A.telephone,
+A.email,
+SUM(C.price)
+FROM store_costumer_contact A
+INNER JOIN store_costumer_ids B
+ON A.client_id = B.client_id
+INNER JOIN store_costumer_sales C
+ON A.client_id = C.client_id
+WHERE 0=0 
+GROUP BY B.client, A.email
+HAVING SUM(price) > 1000
