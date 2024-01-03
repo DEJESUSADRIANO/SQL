@@ -1,0 +1,15 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--MESTRE TODOS OS HOUSE_NAMES NA TABELA GOTHOUSES, COM ESPADAS NO VALOR DE 5000 OU MAIS
+--(VALOR DAS ESPADAS ESTÁ NA TABELA GOTNAMED_SWORDS)
+SELECT
+GH.house_id, GH.house_name
+FROM gothouses GH
+WHERE GH.house_id
+IN
+(SELECT *
+FROM gotnamed_swords GS
+WHERE 0=0
+AND GS.value >= 5000)
