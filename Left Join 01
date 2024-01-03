@@ -1,0 +1,13 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--Temos que pagar a cada funcionário seus bônus. O bônus é calculado como uma porcentagem 
+--de seu salário. Por favor, me dê todos os IDs de funcionários, nomes e o valor 
+--de seus bônus em dólares. $
+
+SELECT ep.employee_name, ep.state, (es.salary* es.bonus) AS Bonus
+FROM employees ep
+LEFT JOIN employees_salary es
+ON ep.employee_id=es.employee_id
+WHERE state IN ('CA', 'TX', 'FL')  
