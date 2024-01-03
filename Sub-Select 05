@@ -1,0 +1,24 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--USANDO QUERY DO EXER62 COMO SUBSELEC, RESPONDA:
+--4:O REVENUE INDICA O LUCRO QUE CADA FUNCIONÁRIO TROUXE PARA EMPRESA, 
+--LISTE OS FUNCIONÁRIOS EM QUE O REVENUE É MENOR QUE O SALÁRIO DO FUNCIONÁRIO E QUAL A DIFERENÇA
+
+SELECT
+ec.employee_id,
+en.first_name,
+en.last_name,
+SUM(ec.revenue)-SUM(es.salary) AS difference_salary_revenue
+FROM employee_clients ec
+JOIN employee_names en
+ON ec.employee_id=en.employee_id
+JOIN employee_status es
+ON es.employee_id=en.employee_id
+JOIN employee_state_manager em
+ON em.employee_id=en.employee_id
+GROUP BY ec.employee_id,
+en.first_name,
+en.last_name
+HAVING SUM(ec.revenue)-SUM(es.salary) < 0
