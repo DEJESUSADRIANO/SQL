@@ -1,0 +1,13 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--UMA TABELA COM O MAIOR (MAX)  E MENOR (MIN) SALARIO (TOTALPAY) COM O NOME DO FUNCIONARIO (EMPLOYEENAME)
+
+SELECT
+A.employeename,
+--MAX(A.totalpay)
+MIN(A.totalpay)
+FROM san_francisco_salaries A
+GROUP BY A.employeename
+ORDER BY MIN(A.totalpay) ASC
