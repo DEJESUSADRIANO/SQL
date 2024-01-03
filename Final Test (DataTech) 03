@@ -1,0 +1,11 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+SELECT a.employee_id, b.manager, a.salary
+FROM employee_status a
+JOIN employee_state_manager b
+ON a.employee_id=b.employee_id 
+WHERE 0=0
+AND b.manager = ('Timothy Kring')
+ORDER BY a.salary DESC
