@@ -2,6 +2,17 @@
 --Source: https://data.world/jerrys/introduction-to-data-analytics
 --Queried using: Data world notebook
 
+--3.Executando a query abaixo, obtemos uma lista de funcionários especificados pelo employee_id 
+--(numero de identificação do funcionário, qual gerente ele responde (manager) e o seu salário (salary)
+
+SELECT a.employee_id, b.manager, a.salary
+FROM employee_status a
+JOIN employee_state_manager b
+ON a.employee_id=b.employee_id 
+
+--O manager Timothy Kring possui 14 funcionários trabalhando em seu time. 
+--Qual o salário do funcionário com o mais alto salário em seu time?
+
 SELECT a.employee_id, b.manager, a.salary
 FROM employee_status a
 JOIN employee_state_manager b
