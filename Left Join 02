@@ -1,0 +1,14 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--Usando a mesma query, por favor, mostre apenas aos funcionários que têm bônus 
+--acima de US $ 3.000
+
+SELECT ep.employee_name, ep.state, (es.salary* es.bonus) AS Bonus
+FROM employees ep
+LEFT JOIN employees_salary es
+ON ep.employee_id=es.employee_id
+WHERE 0=0
+AND state IN ('CA', 'TX', 'FL')
+AND (es.salary* es.bonus) >3000
