@@ -1,0 +1,12 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--ESCREVA UA QUERY QUE GERE UMA TABELA COM BONUS POR STATUS
+
+SELECT 
+--A.employee_id,
+A.status,
+(SUM(A.salary) * SUM(A.bonus)) AS Bonus_amount
+FROM employee_status A
+GROUP BY A.status
