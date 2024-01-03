@@ -1,0 +1,22 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--USANDO AS TABELAS GOTHOUSES, GOTNAMED_SWORDS, MOSTRAR TODOS OS NOMES DE CASAS (HOUSES)
+--E NOMES DE ESPADAS (SWORDS) ONDE OS VALORES DAS ESPADAS SÃO OS MESMOS QUE OS VALORES
+--DE ESPADAS DE AÇO (STEEL) - ESPADAS QUE CONTÉM STEEL NO MATERIAL.
+--DICA: O MATERIAL NO QUALK AS ESADAS SÃO FEITAS PODE SER ENCONTRADO NA COLUNA MATERIAL
+--NA TABELA GOTNAMED_SWORDS
+SELECT
+GH.house_name, GS.name, GS.material
+FROM gothouses GH
+INNER JOIN gotnamed_swords GS
+ON GS.house_id = GH.house_id
+WHERE 0=0
+AND GH.house_id
+IN
+(SELECT 
+GS.house_id, GS.name, GS.material
+FROM gotnamed_swords GS
+WHERE 0=0
+AND GS.material LIKE '%STEEL%')
