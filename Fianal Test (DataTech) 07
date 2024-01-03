@@ -1,0 +1,21 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--7.Temos duas tabelas, user_info (usuários) e platform_usage (uso da plataforma). 
+--tabela de usuários (user_info) contém informações que temos sobre os usuários da nossa plataforma. A tabela de uso (plataform_usage) 
+--rastreia o uso da plataforma que registra o browser (navegador) e o device_type (tipo_de_dispositivo) sempre que um usuário faz login na Plataforma.
+--Quantos usuários entre 18 e 35 anos (campo age) visitaram a nossa plataforma em um dispositivo móvel (mobile) em 2019?
+
+SELECT 
+DISTINCT A.user_id,
+A.user_name,
+A.first_name,
+A.age,
+B.device_type
+FROM user_info A INNER JOIN platform_usage B
+ON A.user_id = B.user_id
+WHERE 0=0
+AND A.age BETWEEN 18 AND 35
+AND B.timestamp LIKE '2019%'
+AND B.device_type = "mobile"
