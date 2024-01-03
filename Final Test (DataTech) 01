@@ -2,11 +2,16 @@
 --Source: https://data.world/jerrys/introduction-to-data-analytics
 --Queried using: Data world notebook
 
+
+--Para próxima questão nós vamos usar a tabela applications_csv  disponível na mesma área do Data World (Introduction to Data Analytics).
+--A tabela faz o tracking de todos os candidatos que submeteram uma aplicação para uma vaga em uma grande empresa. A tabela registra o ID (applicant_id)  
+--da pessoa que iniciou uma aplicação, quando a aplicação foi criada (application_created_at) e quando ela foi submetida (submitted_at), 
+--como vemos no snapshot da tabela abaixo.
+--Toda vez que uma pessoa inicia o processo de criar uma aplicação um valor de data (dd-mm-aaaa) é registrado na tabela no campo application_created_at 
+--e assim que a aplicação um valor de data é adicionado ao campo submitted_at.
+
+--Baseado nos dados acima, responda a seguinte pergunta.
 --1. Quantas pessoas submeteram uma aplicação e quantas pessoas não submeteram uma aplicação? 
---Dica: O campo submitted_at conta toda vez que uma aplicação é submetida. Quando o campo não está vazio (IS NOT NULL) 
---quer dizer que um registro foi feito, quando ele não contain data (IS NULL) significa que a aplicação não foi submetida.
-
-
 
 SELECT 
 A.applicant_id,
