@@ -1,0 +1,21 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--8.Temos duas tabelas, user_info (usuários) e platform_usage (uso da plataforma). A tabela de usuários (user_info) 
+--contém informações que temos sobre os usuários da nossa plataforma. A tabela de uso (plataform_usage) rastreia o uso da plataforma que registra o browser (navegador)
+--e o device_type (tipo_de_dispositivo) sempre que um usuário faz login na Plataforma.
+--Crie uma nova tabela que contenha apenas usuários que não tenham feito login na plataforma em 2019 mas fizeram o login nos outros anos.
+
+SELECT
+A.user_id,
+A.email,
+A.user_name,
+A.first_name,
+B.timestamp,
+B.browser,
+B.device_type
+FROM user_info A INNER JOIN platform_usage B
+ON A.user_id = B.user_id
+WHERE 0=0 
+AND B.timestamp NOT LIKE ('2019%')
