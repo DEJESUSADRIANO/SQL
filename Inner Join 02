@@ -1,0 +1,20 @@
+--Dataset: introduction-to-data-analytics From Data.World
+--Source: https://data.world/jerrys/introduction-to-data-analytics
+--Queried using: Data world notebook
+
+--ESCREVA UMA CONSULTA SQL PARA JOIN nas tabelas ads_data_refence e ads_data_revenue onde
+--você obtém o INVENTORYTYPE E O ADSIZE de uma tabela e as impressões e cliques da outra
+--para os seguintes formatos de tipo de inventario:
+--FORMAT2, FORMAT3, FORMAT4, FORMAT5, FORMAT6
+
+SELECT 
+A.inventorytype,
+A.ad_size,
+SUM(B.impressions) AS total_impressions,
+SUM(B.clicks) AS totaL_clicks
+FROM ads_data_reference A
+INNER JOIN ads_data_revenue_1 B
+ON A.campaign_id=B.campaign_id
+WHERE 0=0
+AND A.inventorytype IN ('Format2', 'Format3', 'Format4', 'Format5', 'Format6')
+GROUP BY A.inventorytype, A.ad_size
